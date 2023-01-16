@@ -43,7 +43,6 @@ const reducer = (state:State, {type, payload}: Action) => {
                 default:
                     throw new Error(`Unknown action type: ${type}`)
     }
-
 }
 
 export const AuthProvider = ({ children }:{children :React.ReactNode}) => {
