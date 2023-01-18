@@ -1,7 +1,6 @@
 import express from "express";
 import morgan from "morgan";
 import { AppDataSource } from "./data-source";
-// import { AppDataSource } from "./data-source";
 
 import authRoutes from './routes/auth';
 import subRoutes from './routes/subs';
@@ -35,7 +34,7 @@ app.use(express.static("public"))
 
 let port =4444;
 app.listen(port,async () => {
-    console.log(`server running at ${process.env.ORIGIN};`);
+    console.log(`server running at ${process.env.APP_URL};`);
 
     AppDataSource.initialize().then(()=>{
         console.log("database initialized")
